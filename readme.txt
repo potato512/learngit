@@ -95,3 +95,69 @@ MAC上使用Git（http://git-scm.com）
 
 五、解决冲突
 1 同一个文件存在冲突时，即出现形如“<<<<<<< ======= >>>>>>>”的文本信息，修改后，再进行更新操作（git add 文件名，git commit -m 备注）
+
+
+六、远程仓库信息处理
+1 查看远程仓库信息：git remote（origin为远程仓库名称），或git remote -v（显示更详细信息）
+2 推送分支：git push origin master（master为主分支，也可以为其他子分支）
+3 下载克隆远程仓库内容：git clone git@github.com:potato512/learngit.git
+4 设置标签：git tag v1.0，或git tag v1.0 6224937（6224937为某个提交id号的版本），或git tag -a v1.0 -m “version 1.0 released” 6224937（6224937为某个提交id号的版本，-a为指定标签名，-m为指定说明文字）
+5 查看标签：git tag
+6 查看标签信息：git show v1.0
+7 下载分支版本：git checkout -b dev origin/dev（创建本地和远程仓库分支对应的分支）
+8 下载更新信息：git pull（必须保证本地仓库分支与远程仓库分支关联，若不一致，则建立关联：git branch —set-upstream dev origin/dev）
+
+
+七、标签管理
+1 创建带有说明的标签：git tag -a v1.0 -m “version 1.0 released” 6224937（6224937为某个提交id号的版本，-a为指定标签名，-m为指定说明文字）
+2 查看标签信息：git show v1.0
+3 创建带有-s私钥签名的标签：git tag -s v1.0 -m “signed version 1.0 released” 6224937
+4 删除标签：git tag -d v1.0（只是删除本地仓库的标签），或git push origin:refs/tags/v1.0（删除远程仓库标签）
+5 推送标签到远程仓库：git push origin v1.0，或git push origin —tags（一次性推送全部尚未推送到远程的本地标签）
+
+
+八、使用GitHub
+1 把别人的项目克隆到自己帐号下：点击Fork-然后下载到本地仓库就可以进行修改等操作（如果想修改他人项目的bug，或新增功能，可以在GitHub上发起一个pull request）
+
+2 配置
+2-1 忽略特殊文件：创建.gitignore文件（要忽略的内容），然后提交到版本仓库
+要忽略的内容
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# My configurations:
+db.ini
+deploy_key_rsa
+
+2-2 配置别名
+2-2-1 git config —global alias.st status（表示 git status 的简写为 git st）
+
+2-3 搭建Git服务器
+前提条件：运行linux的机器（Ubuntu，或Debian），sudo权限帐号
+2-3-1 安装git：sudo apt-get install git
+2-3-2 创建git用户：adduser git
+2-3-3 创建证书登录：收集所有需要登录的用户的公钥（即id_rsa.pub文件），把所有公钥导入到home/git/.ssh/authorized_keys文件里（一行一个）
+2-3-4 初始化git仓库：sudo git init —bare sample.git（注意先选定文件夹目录）
+2-3-5 把owner改为git：sudo chown -R git:git sample.git
+2-3-6 禁用shell登录：通过编辑/etc/passwd文件完成，将 git:x:1001:1001:,,,:/home/git:/bin/bash 改为 git:x:1001:1001:,,,:/home/git:/user/bin/git-shell
+2-3-7 克隆远程仓库：git clone git@server:/srv/sample.git
+
+2-4 其他
+2-4-1 管理公钥：Gitosis
+2-4-2 管理权限：Gitolite
+
+
+
+
+
+
