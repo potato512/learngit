@@ -1,6 +1,5 @@
-Git is a distributed version control system.
-Git is free software.
-Git has a mutable index called stage.
+
+MAC上GitHub工具下载（https://mac.github.com/index.html）
 
 
 MAC上使用Git（http://git-scm.com）
