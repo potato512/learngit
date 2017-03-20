@@ -1,4 +1,8 @@
 # Git分布式版本控制系统。
+
+[Git](http://git-scm.com)
+[Git图形界面工具](https://mac.github.com/index.html)
+
 SVN集中式和Git分布式版本控制系统有什么区别呢？
 * 集中式：
   * 1、必须联网，且带宽够大，速度够快；
@@ -39,6 +43,8 @@ which git
 
    * 方法2：安装Xcode，Xcode集成了Git，不过默认没有安装，你需要运行Xcode，选择菜单“Xcode”->“Preferences”，在弹出窗口中找到“Downloads”，选择“Command Line Tools”，点“Install”就可以完成安装了。
 
+# Git的使用
+[Git_Initialization初始化使用](https://github.com/potato512/learngit/Git_Initialization)
 
 
 
