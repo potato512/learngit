@@ -43,11 +43,13 @@ git remote add origin git@github.com:potato512/learngit.git
 ~~~
 
 2 远程仓库拉取最新代码到本地仓库
-拉取命令：
-
+拉取命令：git pull origin 分支名称
+~~~ javascript
+git pull origin master
+~~~
 3 本地仓库代码提交到远程仓库
-提交命令（首次）：git push -u origin master。
-提交命令（二次）：git push origin master。
+提交命令（首次）：git push -u origin 分支名称。
+提交命令（二次）：git push origin 分支名称。
 说明：-u表示第一次提交；origin表示远程仓库；master表示当前分支。
 ~~~ javascript
 // 提交命令（首次）
@@ -75,6 +77,8 @@ git clone git@github.com:potato512/learngit.git
 ![克隆远程仓库01.png](./images/克隆远程仓库01.png)
 ![克隆远程仓库02.png](./images/克隆远程仓库02.png)
 ![提交远程仓库.png](./images/提交远程仓库.png)
+![远程仓库获取.png](./images/远程仓库获取.png)
+
 
 
 
