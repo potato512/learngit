@@ -15,16 +15,15 @@ git config --global user.email "tmp@163.com"
 Git的使用
 仓库，也叫版本库repository，即文件管理（修改、删除）的目录。
 * 1 创建目录
-  * 1-1 创建存放文件的目录：mkdir 目录名。如：
+  * 1-1 创建存放文件的目录：mkdir 目录名。
+  * 1-2 进入目录：cd 目录名。
+  * 1-3 查看目录路径：pwd。
 ~~~ javascript
+// 创建文件目录
 mkdir learnGit
-~~~
-  * 1-2 进入目录：cd 目录名。如：
-~~~ javascript
+// 进入文件目录
 cd learnGit
-~~~ 
-  * 1-3 查看目录路径：pwd。如：
-~~~ javascript
+// 查看目录路径
 pwd
 ~~~ 
 * 2 将目录变成Git可以管理的仓库
@@ -36,23 +35,23 @@ git init
 ~~~ 
 * 3 把文件添加到版本库
   * 注意：Git版本库只能管理以纯文本（txt文件、网页、程序代码等）编写的文件，而图片文件，或音视频文件则只知道如从100KB变成120KB的改变，而不像知道文本文件第几行新增，或修改，或删除了某个单词这么详细。
-  * 3-1 把文件添加到仓库：git add 文件名。如：
+  * 3-1 把文件添加到仓库：git add 文件名。
+  * 3-2 把文件提交到仓库：git commit -m 备注。
 ~~~ javascript
+// 添加单个修改文件
 git add learnGit.txt
 // 添加所有修改
 git add .
-~~~ 
-  * 3-2 把文件提交到仓库：git commit -m 备注。如：
-~~~ javascript
+// 提交修改文件（添加备注说明）
 git commit -m “添加文件learnGit.txt”
 ~~~ 
 * 4 查看仓库状态
-  * 4-1 仓库当前的状态：git status
+  * 4-1 仓库当前的状态：git status。
+  * 4-2 仓库文件修改内容：git diff，或git diff 文件名。
 ~~~ javascript
+// 查看仓库当前状态
 git status
-~~~ 
-  * 4-2 仓库文件修改内容：git diff，或git diff 文件名。如：
-~~~ javascript
+// 查看仓库修改内容
 git diff
 // 或
 git diff learnGit.txt
@@ -96,12 +95,12 @@ git reset HEAD learnGit.txt
 ~~~ 
 * 10 删除文件
   * 先将文件从目录文件夹中删除，再从版本库中删除
-  * 10-1 删除文件：git rm 文件名称。如：
+  * 10-1 删除文件：git rm 文件名称。
+  * 10-2 提交删除文件：git commit -m 备注。
 ~~~ javascript
+// 删除文件
 git rm test.txt
-~~~ 
-  * 10-2 提交删除文件：git commit -m 备注。如：
-~~~ javascript
+// 提交文件（添加备注说明）
 git commit -m “remove file:test.txt”
 ~~~ 
 
