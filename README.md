@@ -46,6 +46,7 @@ which git
 # Git的使用
 * [Git_Initialization初始化使用](https://github.com/potato512/learngit/tree/master/GitUsing/Git_Initialization)
 * [Git_RemoteRepo远程仓库](https://github.com/potato512/learngit/tree/master/GitUsing/Git_RemoteRepo)
+* [Git_Branch分支管理](https://github.com/potato512/learngit/tree/master/GitUsing/Git_Branch)
 
 
 
