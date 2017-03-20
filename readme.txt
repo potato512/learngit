@@ -85,9 +85,9 @@ MAC上使用Git（http://git-scm.com）
 1 分支管理
 1-1 创建分支dev：git checkout -b dev（表示创建并切换到分支dev，即git branch dev，git checkout dev）
 1-2 查看分支：git branch
-1-3 导出分支内容：git checkout dev
+1-3 切换分支内容：git checkout dev
 1-4 修改分支内容后提交更新代码（git add 文件名，git commit -m 备注，git push origin dev）
-1-5 导出主分支内容：git checkout master
+1-5 切换主分支内容：git checkout master
 1-6 合并分支（如果还在分支dev上则无法合并，也无法删除）：git merge dev，或git merge --no-ff -m "merge with no-ff" dev
 1-7 删除分支：git branch -d dev，或没有合并时的强行删除git branch -D dev
 
