@@ -30,6 +30,7 @@ Git管理的是修改（如新增文件、新增字符、删除文件、删除�
 * 1、在Linux上安装Git：sudo apt-get install git
 * 2、Mac OS X上安装Git:
    * 方法1 ：安装homebrew，然后通过homebrew安装Git，具体方法请参考homebrew的文档：http://brew.sh/。
+   * 方法2：安装Xcode，Xcode集成了Git，不过默认没有安装，你需要运行Xcode，选择菜单“Xcode”->“Preferences”，在弹出窗口中找到“Downloads”，选择“Command Line Tools”，点“Install”就可以完成安装了。
 ~~~ javascript
 // 安装  
 brew install git  
@@ -41,10 +42,10 @@ git --version
 which git  
 ~~~
 
-   * 方法2：安装Xcode，Xcode集成了Git，不过默认没有安装，你需要运行Xcode，选择菜单“Xcode”->“Preferences”，在弹出窗口中找到“Downloads”，选择“Command Line Tools”，点“Install”就可以完成安装了。
 
 # Git的使用
-[Git_Initialization初始化使用](https://github.com/potato512/learngit/tree/master/GitUsing/Git_Initialization)
+* [Git_Initialization初始化使用](https://github.com/potato512/learngit/tree/master/GitUsing/Git_Initialization)
+* [Git_RemoteRepo远程仓库](https://github.com/potato512/learngit/tree/master/GitUsing/Git_RemoteRepo)
 
 
 
