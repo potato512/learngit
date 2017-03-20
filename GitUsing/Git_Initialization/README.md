@@ -3,7 +3,13 @@
 Git的配置
 * 1 指定用户名：git config --global user.name "Your Name"
 * 2 指定邮件地址：git config --global user.email "email@example.com"
-##### 如何取消设置？
+~~~ javascript
+// 指定用户名
+git config --global user.name "devZhang"
+// 指定邮件地址
+git config --global user.email "tmp@163.com"
+~~~
+`如何取消设置？`
 
 
 Git的使用
@@ -32,7 +38,9 @@ git init
   * 注意：Git版本库只能管理以纯文本（txt文件、网页、程序代码等）编写的文件，而图片文件，或音视频文件则只知道如从100KB变成120KB的改变，而不像知道文本文件第几行新增，或修改，或删除了某个单词这么详细。
   * 3-1 把文件添加到仓库：git add 文件名。如：
 ~~~ javascript
-git add learnGit.txt。
+git add learnGit.txt
+// 添加所有修改
+git add .
 ~~~ 
   * 3-2 把文件提交到仓库：git commit -m 备注。如：
 ~~~ javascript
